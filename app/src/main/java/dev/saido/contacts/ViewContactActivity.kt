@@ -2,6 +2,9 @@ package dev.saido.contacts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import com.squareup.picasso.NetworkPolicy
+import com.squareup.picasso.Picasso
 import dev.saido.contacts.databinding.ActivityMainBinding
 import dev.saido.contacts.databinding.ActivityViewContactBinding
 import dev.saido.contacts.databinding.ContactListItemBinding
@@ -19,10 +22,10 @@ class ViewContactActivity : AppCompatActivity() {
 //        val name = extras?.getString("NAME", "")
 //        var email = extras?.getString("EMAIL", "")
 //        val intent = Intent()
-        val name = extras?.getString("NAME", "name")
-        val email = extras?.getString("EMAIL", "email")
-        val location = extras?.getString("LOCATION", "location")
-        val phone = extras?.getString("PHONE", "phone")
+        val name= extras?.getString("NAME", "")
+        val email = extras?.getString("EMAIL", "")
+        val location = extras?.getString("LOCATION", "")
+        val phone = extras?.getString("PHONE", "")
         val image = extras?.getString("IMAGE", "")
 
         binding.tvName1.text = name
@@ -36,6 +39,12 @@ class ViewContactActivity : AppCompatActivity() {
             .load(image)
             .resize(300, 300)
             .centerCrop()
+            .networkPolicy(NetworkPolicy.OFFLINE)
             .into(binding.imgPerson)
+
+
+        Toast.makeText(this,"$name:$email", Toast.LENGTH_SHORT).show()
+
+
     }
     }
