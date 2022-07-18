@@ -7,7 +7,7 @@
     tools:context=".ViewContactActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgPerson"
         android:layout_width="278dp"
         android:layout_height="213dp"
         android:layout_marginTop="120dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgArrow"
         android:layout_width="69dp"
         android:layout_height="64dp"
         android:layout_marginStart="48dp"
@@ -28,7 +28,7 @@
         app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgEdit"
         android:layout_width="66dp"
         android:layout_height="64dp"
         android:layout_marginTop="32dp"
@@ -41,18 +41,18 @@
         android:id="@+id/tvName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="Khalid"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imgPerson" />
 
     <TextView
         android:id="@+id/tvEmail1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:text="khaluomar@gmail.com"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
         android:id="@+id/tvAddress1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="32dp"
         android:text="korongo616"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -81,32 +81,39 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNumber1" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="125dp"
-        android:layout_height="105dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        android:id="@+id/imgCalls"
+        android:layout_width="76dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMessage"
+        app:layout_constraintEnd_toStartOf="@+id/imgMessage"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_call_24"
-        tools:layout_editor_absoluteY="662dp" />
+        app:srcCompat="@drawable/ic_baseline_call_24" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="114dp"
-        android:layout_height="107dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        android:id="@+id/imgMessage"
+        android:layout_width="71dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/imgVideo"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:srcCompat="@drawable/ic_baseline_message_24"
-        tools:layout_editor_absoluteY="660dp" />
+        app:layout_constraintStart_toEndOf="@+id/imgCalls"
+        app:srcCompat="@drawable/ic_baseline_message_24" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="124dp"
-        android:layout_height="124dp"
+        android:id="@+id/imgVideo"
+        android:layout_width="64dp"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:srcCompat="@drawable/ic_baseline_videocam_24"
-        tools:layout_editor_absoluteY="660dp" />
+        app:layout_constraintStart_toEndOf="@+id/imgMessage"
+        app:srcCompat="@drawable/ic_baseline_videocam_24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
