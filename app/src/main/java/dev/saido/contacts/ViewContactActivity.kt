@@ -22,16 +22,17 @@ class ViewContactActivity : AppCompatActivity() {
 //        val name = extras?.getString("NAME", "")
 //        var email = extras?.getString("EMAIL", "")
 //        val intent = Intent()
-        val name= extras?.getString("NAME", "")
-        val email = extras?.getString("EMAIL", "")
-        val location = extras?.getString("LOCATION", "")
-        val phone = extras?.getString("PHONE", "")
+        val name= extras?.getString("NAME", "name")
+        binding.tvName1.text = name
+        val email = extras?.getString("EMAIL", "email")
+        binding.tvEmail1.text = email
+        val location = extras?.getString("LOCATION", "location")
+        binding.tvAddress1.text = location
+        val phone = extras?.getString("PHONE", "phone")
+        binding.tvNumber1.text = phone
         val image = extras?.getString("IMAGE", "")
 
-        binding.tvName1.text = name
-        binding.tvEmail1.text = email
-        binding.tvAddress1.text = location
-        binding.tvNumber1.text = phone
+
 
 
 
